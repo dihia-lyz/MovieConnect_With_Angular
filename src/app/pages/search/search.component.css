@@ -1,0 +1,27 @@
+.movies-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 8px;
+}
+
+.movie-item {
+  height: 150px;
+  position: relative;
+}
+
+.movie-item img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.movie-item h5 {
+  position: absolute;
+  bottom: 0.3rem;
+}
+
+@media (max-width: 750px) {
+  .movies-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

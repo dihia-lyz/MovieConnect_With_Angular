@@ -1,0 +1,31 @@
+<div class="container mt-5 p-3">
+  <form class="row mb-3" [formGroup]="searchForm" (ngSubmit)="submitSearch()">
+    <div class="col-md-10 mb-2">
+      <input
+        type="text"
+        class="form-control"
+        formControlName="movieName"
+        placeholder="Username"
+        aria-label="Username"
+      />
+    </div>
+    <div class="col-md-2">
+      <button class="btn btn-danger w-100" type="submit">search</button>
+    </div>
+  </form>
+
+  <div class="movies-container">
+    <ng-container *ngFor="let m of searchedMovies">
+      <ng-container *ngIf="m.backdrop_path !== null">
+        <div class="movie-item">
+          <img
+            src="https://image.tmdb.org/t/p/original/{{ m.backdrop_path }}"
+            alt=""
+            [routerLink]="['/movie', m.id]"
+          />
+          <h5>{{ m.title }}</h5>
+        </div>
+      </ng-container>
+    </ng-container>
+  </div>
+</div>

@@ -1,0 +1,51 @@
+.movie-image {
+  height: 350px;
+  max-width: 250px;
+  object-fit: cover;
+}
+
+.top-box {
+  height: 350px;
+  padding: 5;
+  display: flex;
+  justify-content: end;
+  padding-bottom: 5rem;
+  flex-direction: column;
+}
+
+.trailer-btn {
+  width: 200px;
+}
+
+.bottom-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  /* grid-template-rows: 150px; */
+  gap: 20px;
+}
+
+.profile-container {
+  display: flex;
+}
+
+.profile-image {
+  flex: 1;
+  height: 80px;
+  object-fit: cover;
+}
+
+.profile-details {
+  flex: 3;
+  padding-inline: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.name {
+  font-size: 14px;
+}
+
+.sub-name {
+  font-size: 13px;
+}
